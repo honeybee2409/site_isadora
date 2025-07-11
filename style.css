@@ -1,0 +1,563 @@
+/* Importação de fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+/* Variáveis de Cores */
+:root {
+    --primary-blue: #192945; /* Novo azul escuro principal (fornecido) */
+    --secondary-yellow: #ffc107; /* Um amarelo quente (apenas para layout) */
+    --dark-text: #0a0e17; /* Nova cor de texto mais escura */
+    --light-text: #f8f9fa;
+    --white-bg: #f8f6f2; /* Fundo branco mais suave */
+    --light-gray-bg: #f2f2f2;
+}
+
+/* Reset básico e configurações globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: var(--dark-text);
+    background-color: var(--primary-blue); /* Aplica o azul escuro ao fundo */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    color: var(--secondary-yellow); /* Links agora em amarelo */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--light-text); /* Hover de links pode ser branco */
+}
+
+/* Header */
+.main-header {
+    background-color: rgba(25, 41, 69, 0.9); /* Azul principal com leve transparência */
+    color: var(--light-text);
+    padding: 2.5rem 0; /* AUMENTADO: padding vertical */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.main-header .container {
+    display: flex;
+    flex-direction: column; /* Organiza os itens verticalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    text-align: center; /* Alinha o texto da logo e link */
+}
+
+.main-header .logo {
+    /* Remover propriedades de texto, pois agora é uma imagem */
+    /* font-size: 1.8rem; */
+    /* font-weight: 700; */
+    /* color: var(--light-text); */
+    margin-bottom: 10px; /* Espaço abaixo da logo (ainda útil para o link abaixo) */
+}
+
+.main-header .logo img {
+    max-height: 180px; /* Ajuste o tamanho máximo da altura da sua logo */
+    width: auto; /* Mantém a proporção da imagem */
+    display: block; /* Garante que a imagem se comporte como um bloco para margin auto */
+    margin: 0 auto; /* Centraliza a imagem horizontalmente dentro do h1 */
+}
+
+/* ESTILO PARA O LINK ABAIXO DA LOGO */
+.services-link {
+    color: var(--secondary-yellow); /* O link será amarelo para destaque */
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 5px 15px;
+    border: 2px solid var(--secondary-yellow); /* Borda amarela */
+    border-radius: 50px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.services-link:hover {
+    background-color: var(--secondary-yellow);
+    color: var(--primary-blue); /* Texto azul escuro no hover */
+}
+
+
+/* Hero Section (Seção Principal) */
+.hero-section {
+    background-color: rgba(25, 41, 69, 0.7); /* Azul principal com mais transparência */
+    padding: 80px 0;
+    text-align: center;
+    min-height: 500px; /* Garante uma altura mínima */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-section .hero-content {
+    max-width: 800px;
+    color: var(--light-text); /* Texto branco na seção hero */
+}
+
+.hero-section h2 {
+    font-size: 2.5rem;
+    color: var(--secondary-yellow); /* Título em amarelo */
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero-section .slogan {
+    font-size: 1.5rem;
+    color: var(--light-text); /* Slogan agora branco */
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.hero-section .contact-info p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: var(--light-text); /* Informações de contato em branco */
+}
+
+.hero-section .contact-info a {
+    font-weight: 600;
+    color: var(--secondary-yellow); /* Links em amarelo */
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: var(--secondary-yellow);
+    color: var(--primary-blue); /* Texto azul escuro no botão amarelo */
+    padding: 15px 30px;
+    border-radius: 50px;
+    margin-top: 30px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-blue); /* Botão azul escuro ao passar o mouse */
+    color: var(--light-text); /* Texto branco no botão azul */
+    transform: translateY(-3px);
+}
+
+/* Footer */
+.main-footer {
+    background-color: var(--dark-text);
+    color: var(--light-text);
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 0.9rem;
+    margin-top: 50px; /* Adiciona um espaço entre a seção anterior e o rodapé */
+}
+
+/* --- Seções Adicionais --- */
+
+.section-padding {
+    padding: 80px 0; /* Espaçamento padrão para as seções */
+    background-color: var(--white-bg); /* Fundo branco para as seções de conteúdo */
+}
+
+.section-alt-bg {
+    background-color: var(--light-gray-bg); /* Fundo cinza claro para seções alternadas */
+}
+
+.section-title {
+    font-size: 2.2rem;
+    color: var(--primary-blue); /* Títulos de seção em azul escuro */
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--secondary-yellow); /* Linha de destaque amarela */
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* Seção Nosso Propósito */
+.proposito-content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Duas colunas: texto e imagem */
+    gap: 50px;
+    align-items: center; /* Alinha verticalmente */
+    max-width: 1000px;
+    margin: 0 auto;
+    color: var(--dark-text); /* Texto da seção em azul muito escuro */
+}
+
+.proposito-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.proposito-text p {
+    margin-bottom: 20px;
+}
+
+.proposito-highlight {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--light-text); /* Texto de destaque agora branco */
+    margin-top: 30px;
+    padding: 15px;
+    background-color: var(--primary-blue); /* Fundo azul escuro para o destaque */
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.proposito-image {
+    text-align: center;
+}
+
+.advogada-foto {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Cantos levemente arredondados */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* Sombra mais pronunciada */
+    display: block; /* Remove espaço extra abaixo da imagem */
+    margin: 0 auto; /* Centraliza a imagem se a coluna for maior */
+}
+
+/* Estilos para o botão secundário (na seção Nosso Propósito) */
+.btn-secondary {
+    display: inline-block;
+    background-color: var(--secondary-yellow); /* Use a cor amarela como fundo */
+    color: var(--primary-blue); /* Texto azul escuro */
+    padding: 15px 30px;
+    border-radius: 50px;
+    margin-top: 30px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-blue); /* Inverta as cores ao passar o mouse */
+    color: var(--light-text);
+    transform: translateY(-3px);
+}
+
+/* Seção Nossos Serviços */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service-item {
+    background-color: transparent; /* A cor de fundo será definida no link */
+    border: 1px solid #ddd;
+    border-radius: 8px; /* Mantém o arredondamento */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    overflow: hidden; /* IMPORTANTE: Garante que o conteúdo (link) respeite o border-radius */
+    cursor: pointer; /* Mantém o cursor de ponteiro no card */
+    background-color: var(--white-bg); /* Fundo branco dos itens de serviço */
+}
+
+/* Estilo para o link que envolve todo o cartão de serviço */
+.service-card-link {
+    display: block; /* Faz o link ocupar todo o espaço do pai */
+    padding: 30px; /* Adiciona o padding que estava no .service-item */
+    color: inherit; /* Herda a cor do texto para não sublinhar */
+    text-decoration: none; /* Remove sublinhado padrão */
+    height: 100%; /* Garante que o link ocupe toda a altura do service-item */
+    text-align: center; /* Centraliza o conteúdo do card */
+
+    background-color: var(--white-bg); /* Cor de fundo inicial transparente para a transição */
+    border-radius: inherit; /* Herda o border-radius do pai (.service-item) */
+    transition: background-color 0.4s ease-out, transform 0.4s ease-out, box-shadow 0.4s ease-out; /* Transição mais suave e abrangente */
+}
+
+.service-item .service-card-link h3 {
+    color: var(--primary-blue); /* Cor do título (azul escuro) */
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    transition: color 0.4s ease-out; /* Transição para a cor do título no hover */
+    color: var(--dark-text); /* Cor do título em azul muito escuro */
+}
+
+.service-item .service-card-link p {
+    font-size: 1rem;
+    color: var(--dark-text); /* Cor da descrição */
+    transition: color 0.4s ease-out; /* Transição para a cor da descrição no hover */
+}
+
+/* Efeito de hover no card de serviço (aplicado ao link) */
+.service-item .service-card-link:hover {
+    background-color: var(--primary-blue); /* Fundo azul escuro no hover */
+    transform: translateY(-5px); /* Efeito de elevação */
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1); /* Sombra mais forte */
+}
+
+.service-item .service-card-link:hover h3 {
+    color: var(--secondary-yellow); /* Título do link em amarelo no hover */
+}
+
+.service-item .service-card-link:hover p {
+    color: var(--light-text); /* Texto da descrição branco no hover */
+}
+
+/* Seção Avaliação dos Clientes */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.testimonial-item {
+    background-color: var(--primary-blue); /* Fundo azul escuro para os depoimentos */
+    color: var(--light-text);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.testimonial-item .quote {
+    font-size: 1.1rem;
+    font-style: italic;
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
+
+.testimonial-item .author {
+    font-weight: 600;
+    text-align: right;
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* Seção de Contato - Com Formulário */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Duas colunas para formulário e info */
+    gap: 50px;
+    align-items: flex-start;
+}
+
+.contact-form-container {
+    background-color: var(--white-bg);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    color: var(--dark-text); /* Texto do formulário em azul muito escuro */
+}
+
+.contact-intro {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    text-align: center;
+    color: var(--primary-blue); /* Texto em azul escuro */
+    font-weight: 600;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--dark-text);
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.contact-form textarea {
+    resize: vertical; /* Permite redimensionar verticalmente */
+    min-height: 120px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-blue); /* Borda em azul escuro no foco */
+    box-shadow: 0 0 0 3px rgba(25, 41, 69, 0.25); /* Sombra em azul escuro no foco */
+}
+
+.contact-form .btn-primary {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.form-note {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.form-status {
+    margin-top: 15px;
+    font-size: 1rem;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.form-status.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.form-status.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.contact-info-details {
+    background-color: var(--primary-blue); /* Fundo azul escuro para as informações de contato */
+    color: var(--light-text);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    text-align: left;
+}
+
+.contact-info-details h3 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color: var(--secondary-yellow); /* Título em amarelo */
+    text-align: center;
+}
+
+.contact-info-details p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.contact-info-details p strong {
+    display: inline;
+    margin-bottom: 0;
+}
+
+.online-only-info {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.online-only-info p {
+    margin-bottom: 10px;
+}
+
+.online-only-info p:last-child {
+    margin-bottom: 0;
+    font-weight: 600;
+    color: var(--secondary-yellow); /* Texto em amarelo */
+}
+
+
+/* Responsividade */
+@media (max-width: 992px) {
+    .proposito-content-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .proposito-image {
+        order: -1;
+        margin-bottom: 30px;
+    }
+    .advogada-foto {
+        max-width: 80%;
+    }
+    /* Ajustes no layout da seção Nosso Propósito para telas menores */
+    .proposito-text {
+        text-align: center; /* Centralize o texto */
+    }
+    .btn-secondary {
+        display: block; /* O botão ocupa a largura total em telas menores */
+        margin: 30px auto 0; /* Centralize o botão */
+        text-align: center;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr; /* Volta a uma coluna em telas menores */
+    }
+    .contact-form-container,
+    .contact-info-details {
+        padding: 30px;
+    }
+    /* Ajustes para o cabeçalho em telas menores */
+    .main-header .logo {
+        margin-bottom: 5px; /* Menos espaço em telas menores */
+    }
+    .services-link {
+        margin-top: 5px; /* Ajusta o espaçamento */
+        font-size: 1rem;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section h2 {
+        font-size: 2rem;
+    }
+    .hero-section .slogan {
+        font-size: 1.1rem;
+    }
+    .section-title {
+        font-size: 1.8rem;
+    }
+    .proposito-highlight {
+        font-size: 1.1rem;
+    }
+    .advogada-foto {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        padding: 50px 0;
+    }
+    .section-padding {
+        padding: 50px 0;
+    }
+    /* Remove a quebra de linha dos itens do menu no header para telas muito pequenas, embora já esteja ajustado o layout */
+    .main-header .container {
+        padding: 0 10px;
+    }
+    .main-header .logo {
+        font-size: 1.5rem;
+    }
+    .services-link {
+        font-size: 0.9rem;
+    }
+}
